@@ -1,0 +1,38 @@
+{
+    "variables": {
+        "aws_access_key": "{{env `AWS_ACCESS_KEY`}}",
+        "aws_secret_key": "{{env `AWS_SECRET_KEY`}}"
+    },
+    "builders": [
+        {
+            "access_key": "{{user `aws_access_key`}}",
+            "secret_key": "{{user `aws_secret_key`}}",
+            "ami_name": "packer-ami-{{timestamp}}",
+            "instance_type": "t2.micro",
+            "region": "us-west-1",
+            "source_ami": "ami-824c4ee2",
+            "ssh_username": "ec2-user",
+            "type": "amazon-ebs"
+        }
+    ],
+    "provisioners": [
+
+      {
+          "type": "shell",
+          "script": "maveninstall.sh"
+      },
+      {
+          "type": "shell",
+          "script": "javainstall.sh"
+      },
+      {
+          "type": "shell",
+          "script": "gradleinstall.sh"
+      },
+      {
+          "type": "shell",
+          "script": "gitinstall.sh"
+      }
+            ]
+        }
+

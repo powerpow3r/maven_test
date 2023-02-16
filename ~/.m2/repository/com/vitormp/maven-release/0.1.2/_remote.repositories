@@ -1,0 +1,6 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Thu Mar 22 15:07:07 CDT 2018
+maven-release-0.1.2-javadoc.jar>=
+maven-release-0.1.2-sources.jar>=
+maven-release-0.1.2.pom>=
+maven-release-0.1.2.war>=

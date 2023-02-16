@@ -1,0 +1,63 @@
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.vitormp</groupId>
+	<artifactId>maven-release</artifactId>
+	<version>0.1.2</version>
+	<packaging>war</packaging>
+
+	<name>maven-release Maven Webapp</name>
+
+	<scm>
+		<url>https://github.com/addy2908/devops-project.git</url>
+		<connection>scm:git:https://github.com/addy2908/devops-project.git</connection>
+		<developerConnection>scm:git:https://github.com/addy2908/devops-project.git</developerConnection>
+		
+	  <tag>maven-release-0.1.2</tag>
+  </scm>
+
+	<distributionManagement>
+		<!-- Publish versioned releases here -->
+		<repository>
+			<id>nexusreleases</id>
+			<name>new-maven-release</name>
+			<url>http://localhost:8081/repository/new-maven-release/</url>
+		</repository>
+
+		<!-- Publish snapshots here -->
+		<snapshotRepository>
+			<id>nexussnapshots</id>
+			<name>new-maven-snapshot</name>
+			<url>http://localhost:8081/repository/new-maven-snapshot/</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+<dependencies>
+	<dependency>
+                <groupId>junit</groupId>
+        	<artifactId>junit</artifactId>
+		<version>4.10</version>
+		<scope>test</scope>
+	</dependency>
+</dependencies>
+
+	<build>
+		<finalName>maven-release</finalName>
+
+
+
+	<plugins>
+		
+
+	<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>2.5.3</version>
+			</plugin>
+		</plugins>
+	</build>
+
+
+</project>
