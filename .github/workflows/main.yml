@@ -17,6 +17,8 @@ jobs:
       - run: git fetch --depth=1 origin +refs/tags/*:refs/tags/*    
 
 
-      - run: sudo apt install maven
+      - run: |
+          sudo apt install maven
+          ls -la
 
       - run: sudo mvn clear install
