@@ -18,7 +18,8 @@ jobs:
 
 
       - run: |
-          sudo apt install maven
+          sudo apt install maven -y
+          sudo apt install default-jdk -y
           ls -la
 
       - run: sudo mvn clear install
