@@ -10,4 +10,4 @@ jobs:
     - uses: christophebedard/tag-version-commit@v1
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
-        version_tag_prefix: 'v'
+        version_tag_prefix: 'maven-release-'
