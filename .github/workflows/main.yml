@@ -9,3 +9,5 @@ jobs:
         ls -la
         gh repo clone actions/go-dependency-submission
         ls -la
+      env:
+          GITHUB_TOKEN: ${{ github.token }}    
