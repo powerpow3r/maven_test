@@ -13,6 +13,7 @@ jobs:
         with:
           repository: 'addy2908/devops-project'
           fetch-depth: 0 
+      - run: git fetch --depth=1 origin +refs/tags/*:refs/tags/*    
       - name: Setup Maven Action
         uses: s4u/setup-maven-action@v1.2.1
         with:
