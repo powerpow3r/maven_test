@@ -4,7 +4,6 @@ jobs:
   release:
     runs-on: ubuntu-latest
     steps:
-<<<<<<< HEAD
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0 # Doesn't help
