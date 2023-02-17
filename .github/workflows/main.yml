@@ -6,7 +6,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       with: 
-        repository: 'https://github.com/addy2908/devops-project.git'
+        repository: 'addy2908/devops-project'
     - uses: christophebedard/tag-version-commit@v1
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
