@@ -13,6 +13,12 @@ jobs:
         with:
           repository: 'addy2908/devops-project'
           fetch-depth: 0 # Mandatory to use the extract version from tag action
+      - name: "Extract data from tag: version, message, body"
+        id: tag
+        run: |
+          git fetch --tags --force # Retrieve annotated tags. THIS TRICK REALLY HELPS
+          echo ::set-output name=subject::$(git for-each-ref $GITHUB_REF --format='%(contents:subject)')
+          # …    
 
       - name: Extract version from tag
         uses: damienaicheh/extract-version-from-tag-action@v1.0.0
