@@ -2,7 +2,10 @@ on:
   workflow_dispatch:
     tags:
       - '*'
+
 jobs:
+  release:
+    runs-on: ubuntu-latest
   github-example-tags:
     steps:
      - name: GitHub Tag Name example
