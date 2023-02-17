@@ -5,7 +5,7 @@ jobs:
     runs-on: Ubuntu-latest
     steps:
     - name: testname
-    - run: |
+      run: |
         ls -la
         gh repo clone actions/go-dependency-submission
         ls -la
