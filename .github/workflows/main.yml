@@ -13,6 +13,7 @@ jobs:
           git fetch --tags --force # Retrieve annotated tags. THIS TRICK REALLY HELPS
           echo ::set-output name=subject::$(git for-each-ref $GITHUB_REF --format='%(contents:subject)')
           # …
+          echo ${{ github.ref }}
       - name: Create Release
         uses: actions/create-release@v1
         env:
