@@ -6,5 +6,5 @@ jobs:
     steps:
     - name: testname
       run: ls -la
-      run: gh repo clone actions/go-dependency-submission
-      run: ls -la
+           gh repo clone actions/go-dependency-submission
+           ls -la
