@@ -5,9 +5,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-      with: 
+      with:
         repository: 'addy2908/devops-project'
     - uses: christophebedard/tag-version-commit@v1
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
-        version_tag_prefix: 'maven-release-'
+        version_regex: 'Version: ([0-9]+\.[0-9]+\.[0-9]+)'
+        check_entire_commit_message: true
