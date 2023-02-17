@@ -15,10 +15,8 @@ jobs:
           fetch-depth: 1 
           ref: maven-release-0.1.9
       - run: git fetch --depth=1 origin +refs/tags/*:refs/tags/*    
-      - name: Setup Maven Action
-        uses: s4u/setup-maven-action@v1.2.1
-        with:
-          java-version: 8
 
-      - name: Build with Maven
-        run: mvn verify    
+
+      - run: apt install maven
+
+      - run: mvn clear install
